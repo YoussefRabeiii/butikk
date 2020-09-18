@@ -1,0 +1,28 @@
+.basket {
+  display: flex;
+  padding: 20px;
+  background-color: var(--surfaceDark);
+
+  /* display: grid; */
+  /* grid-template-columns: auto 300px; */
+}
+
+/* .basket__content {} */
+
+.basket__ad {
+  width: 100%;
+  margin-block-end: 10px;
+  padding-inline-end: 20px;
+}
+
+.basket__title {
+  padding: 10px;
+  margin-inline-end: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+/* .basket__products {} */
+
+.basket__subtotal {
+  background-color: var(--surfaceDark);
+}

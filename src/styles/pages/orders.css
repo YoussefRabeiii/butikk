@@ -1,0 +1,11 @@
+.orders {
+}
+
+.orders h1 {
+  padding: 20px;
+  text-align: center;
+}
+
+.orders__container {
+  padding: 0 50px;
+}

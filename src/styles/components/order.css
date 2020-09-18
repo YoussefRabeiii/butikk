@@ -1,0 +1,22 @@
+.order {
+  padding: 40px;
+  margin: 20px 0;
+  position: relative;
+  border: 1px solid lightgray;
+  background-color: var(--surface);
+}
+
+.order h2 {
+  margin-block-end: 10px;
+}
+
+.order__id {
+  top: 50px;
+  right: 35px;
+  position: absolute;
+}
+
+.otder__total {
+  font-weight: 500;
+  text-align: right;
+}

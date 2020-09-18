@@ -1,0 +1,13 @@
+.home {
+  /* height: 200vh; */
+}
+
+.home__hero {
+}
+
+.home__hero__img {
+  width: 100%;
+  z-index: -1;
+  margin-block-end: -150px;
+  mask-image: linear-gradient(to bottom, #000, #00000000);
+}

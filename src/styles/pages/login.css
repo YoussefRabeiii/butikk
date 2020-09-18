@@ -1,0 +1,51 @@
+.login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login__logo {
+  margin: 20px;
+}
+
+.login__container {
+  width: 300px;
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  height: fit-content;
+  flex-direction: column;
+  border: 1px solid lightgray;
+}
+
+.login__container h1 {
+  font-weight: 500;
+  margin-block-end: 20px;
+}
+
+/* .login__container form {} */
+
+.login__container form h5 {
+  margin-block-end: 5px;
+}
+
+.login__container form input {
+  width: 98%;
+  height: 30px;
+  margin-block-end: 10px;
+}
+
+.login__signIn,
+.login__signUp {
+  width: 100% !important;
+}
+
+.login__container p {
+  font-size: 12px;
+  margin-block-start: 15px;
+}
+
+.login__signUp {
+  background-color: lightgray !important;
+}

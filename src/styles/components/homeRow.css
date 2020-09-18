@@ -1,0 +1,5 @@
+.homeRow {
+  z-index: 1;
+  margin: 0 5px;
+  display: flex;
+}
