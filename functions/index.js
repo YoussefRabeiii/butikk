@@ -23,11 +23,14 @@ app.get("/checkout/testTheCloud", (req, res) => {
 
   console.log("☁ The Cloud Is Up And Running");
 
-  res.status(201).send({ fromTheCloud: "👋 From The ☁" });
+  res.status(201).send({ fromTheCloud: "👋 From The ☁ 2️⃣" });
 }); // Test Endpoint
 
 app.post("/checkout/create", async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "*");
+  res.set(
+    "Access-Control-Allow-Origin",
+    "https://us-central1-butikkken.cloudfunctions.net/api"
+  );
 
   const total = req.query.total;
 
