@@ -9,7 +9,9 @@ const stripe = require("stripe")(
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({ origin: "https://us-central1-butikkken.cloudfunctions.net/api" })
+);
 app.use(express.json());
 
 // API Routes
