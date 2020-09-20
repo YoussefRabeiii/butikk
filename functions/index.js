@@ -9,7 +9,7 @@ const stripe = require("stripe")(
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: true }))
+app.use(cors({ origin: true }));
 // app.use(
 //   cors({
 //     origin:
@@ -22,7 +22,7 @@ app.use(express.json());
 
 // API Routes
 app.get("/", (req, res) =>
-  res.status(200).send("👋 From The Butikk ☁ Functions")
+  res.status(200).send("👋 From The Butikk ☁ Function")
 ); // Test Endpoint
 
 app.get("/checkout/testTheCloud", (req, res) => {
@@ -31,7 +31,7 @@ app.get("/checkout/testTheCloud", (req, res) => {
 
   console.log("☁ The Cloud Is Up And Running");
 
-  res.status(201).send({ fromTheCloud: "👋 From The ☁ 2️⃣" });
+  res.status(201).send({ fromTheCloud: "👋 From The ☁" });
 }); // Test Endpoint
 
 app.post("/checkout/create", async (req, res) => {
