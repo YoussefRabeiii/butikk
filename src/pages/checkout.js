@@ -35,21 +35,16 @@ const Checkout = () => {
     const getClientSecret = async () => {
       // Stripe need the total to be in currencies subUnits (like cents in dollars)
 
-      // const response = await axios.post(
-      //   `/checkout/create?total=${getBasketTotal(basket) * 100}`,
-      //   { body: "Post Body" },
-      //   {
-      //     headers: {
-      //       "Test-Header": "test-value",
-      //       "Access-Control-Allow-Origin": "https://butikk.netlify.app",
-      //     },
-      //   }
-      // );
-
-      const response = await axios({
-        method: "post",
-        url: `/checkout/create?total=${getBasketTotal(basket) * 100}`,
-      });
+      const response = await axios.post(
+        `/checkout/create?total=${getBasketTotal(basket) * 100}`,
+        { body: "Post Body" },
+        {
+          headers: {
+            "Test-Header": "test-value",
+            "Access-Control-Allow-Origin": "https://butikk.netlify.app",
+          },
+        }
+      );
 
       setClientSecret(response.data.clientSecret);
     };
