@@ -36,14 +36,7 @@ const Checkout = () => {
       // Stripe need the total to be in currencies subUnits (like cents in dollars)
 
       const response = await axios.post(
-        `/checkout/create?total=${getBasketTotal(basket) * 100}`,
-        { body: "Post Body" },
-        {
-          headers: {
-            "Test-Header": "test-value",
-            "Access-Control-Allow-Origin": "https://butikk.netlify.app",
-          },
-        }
+        `/checkout/create?total=${getBasketTotal(basket) * 100}`
       );
 
       setClientSecret(response.data.clientSecret);
