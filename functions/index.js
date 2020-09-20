@@ -35,10 +35,10 @@ app.get("/checkout/testTheCloud", (req, res) => {
 }); // Test Endpoint
 
 app.post("/checkout/create", async (req, res) => {
-  res.set(
-    "Access-Control-Allow-Origin",
-    "https://us-central1-butikkken.cloudfunctions.net/api"
-  );
+  // res.set(
+  //   "Access-Control-Allow-Origin",
+  //   "https://us-central1-butikkken.cloudfunctions.net/api"
+  // );
 
   const total = req.query.total;
 
