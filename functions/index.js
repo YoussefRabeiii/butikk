@@ -35,6 +35,10 @@ app.get("/checkout/testTheCloud", (req, res) => {
 }); // Test Endpoint
 
 app.post("/checkout/create", async (req, res) => {
+  req.setHeader({
+    "Test-Header": "TestHeader Value",
+    "Access-Control-Allow-Origin": "https://butikk.netlify.app",
+  });
   // res.set(
   //   "Access-Control-Allow-Origin",
   //   "https://us-central1-butikkken.cloudfunctions.net/api"

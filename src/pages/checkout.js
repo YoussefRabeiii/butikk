@@ -22,31 +22,35 @@ const Checkout = () => {
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [clientSecret, setClientSecret] = useState(true);
-  const [theCloud, setTheCloud] = useState("👎 Not From The 🤬 ⛈ YET!!!");
+  // const [theCloud, setTheCloud] = useState("👎 Not From The 🤬 ☁ YET!!!");
 
   useEffect(() => {
-    // Check if the Cloud Function Works
-    const testTheCloud = async () => {
-      const response = await axios.get("/checkout/testTheCloud");
+    // Check If MY Cloud Function Works
+    // const testTheCloud = async () => {
+    //   const response = await axios.get("/checkout/testTheCloud");
 
-      setTheCloud(response.data);
-    };
+    //   setTheCloud(response.data);
+    // };
 
     const getClientSecret = async () => {
       // Stripe need the total to be in currencies subUnits (like cents in dollars)
 
       const response = await axios.post(
-        `/checkout/create?total=${getBasketTotal(basket) * 100}`
+        // HIS API
+        `/payments/create?total=${getBasketTotal(basket) * 100}`
+
+        // MY API
+        // `/checkout/create?total=${getBasketTotal(basket) * 100}`
       );
 
       setClientSecret(response.data.clientSecret);
     };
 
-    testTheCloud();
+    // testTheCloud();
     getClientSecret();
   }, [basket]);
 
-  console.log("🤞", theCloud); // For Debugging (Testing)
+  // console.log("🤞", theCloud); // For Debugging (Testing)
   console.log("🔐", clientSecret); // For Debugging
   // console.log("👱‍♀️", user); // For Debugging
 
